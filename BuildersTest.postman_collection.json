@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "f63a67d7-a3a0-4e2d-9ffa-cc17ac55b815",
+		"name": "BuildersTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"client_id\":\"bd753592-cf9b-4d1a-96b9-cb8b2c01bd12\",\r\n    \"client_secret\":\"4e8229fe-1131-439c-9846-799895a8be5b\"\r\n}"
+				},
+				"url": {
+					"raw": "https://vagas.builders/api/builders/auth/tokens",
+					"protocol": "https",
+					"host": [
+						"vagas",
+						"builders"
+					],
+					"path": [
+						"api",
+						"builders",
+						"auth",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "codes",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "1791897b-f240-4b46-872a-8e5e763cfe9c",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\":\"34191790010104351004791020150008291070026000\"\r\n}"
+				},
+				"url": {
+					"raw": "https://vagas.builders/api/builders/bill-payments/codes",
+					"protocol": "https",
+					"host": [
+						"vagas",
+						"builders"
+					],
+					"path": [
+						"api",
+						"builders",
+						"bill-payments",
+						"codes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "billPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bar_code\": \"34191790010104351004791020150008291070026000\",\r\n  \"payment_date\": \"2023-04-04\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bill"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
