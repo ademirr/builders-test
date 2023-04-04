@@ -11,3 +11,5 @@
 6. É possível executar também pela URL "localhost:8080/swagger-ui/index.html" que também é a documentação das API's do projeto.
 
 7. Para acessar o banco de dados (que é em memória), acessar a URL "http://localhost:8080/h2-console/login.do?jsessionid=58a3829e0977b90703b9b01973b011ad". Utilizar as propriedades que estão no arquivo "src\main\resources\application.properties" para logar no banco.
+
+8. Para executar os testes unitários, clicar com o botão direito no pacote "src/test/java" do projeto e executar com Run As -> JUnit Test.
